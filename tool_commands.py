@@ -11,7 +11,7 @@ class ToolCommand:
 
     @staticmethod
     def create_app(app_name=''):
-        assert app_name is True, "app_name不能为空"
+        assert app_name, "app_name不能为空"
         os.system(f"python manage.py startapp {app_name}")
 
     @staticmethod
