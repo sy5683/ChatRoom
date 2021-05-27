@@ -20,14 +20,24 @@ from django.urls import path
 from django.views import static
 from django.views.generic import RedirectView
 
-from login.views import login_revise, login
+from ChatRoom.settings import DEBUG
+from cover.views import revise_cover, cover
+from error.views import not_found, server_error, not_found_404, server_error_500
 
 urlpatterns = [
     url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT}, name='static'),
 
     path('admin/', admin.site.urls),
-    path('', RedirectView.as_view(url='login')),  # 空路径重定向至登录界面
+    path('cover_test/', cover) if DEBUG else path('admin/', cover),
 
-    path('login/', login_revise),
-    path('login', login),
+    path('not_found', not_found),
+    path('server_error', server_error),
+
+    path('', RedirectView.as_view(url='cover/')),  # 空路径重定向至登录界面
+    path('cover/', cover),
+    path('cover', revise_cover),
+
 ]
+
+handler404 = not_found_404
+handler500 = server_error_500
