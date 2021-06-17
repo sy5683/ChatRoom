@@ -1,0 +1,81 @@
+body {
+    background-color: black;
+    /*text-align: center;*/
+}
+
+.login-logo {
+    position: relative;
+    min-height: 500px;
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo img {
+    width: 400px;
+    height: 400px;
+    outline: 0 none !important;
+    user-select: none;
+}
+
+.login-operations {
+    position: relative;
+    min-height: 150px;
+}
+
+#login-operation {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.inputs {
+    width: 100%;
+    text-align: center;
+}
+
+.account-input{
+    background: none;
+    border: 2px none;
+    width: 200px;
+    color: white;
+    font-weight: 900;
+    font-size: 200%;
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    cursor: text;
+    outline: 0 none !important;
+}
+
+.account-input:hover {
+    background: none;
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background: none;
+    border: 2px none;
+    color: #202020;
+    font-weight: 900;
+    font-size: 200%;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.5s linear;
+    outline: 0 none !important;
+    user-select: none;
+}
+
+.btn:hover {
+    color: white;
+}
