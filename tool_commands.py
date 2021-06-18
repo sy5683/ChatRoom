@@ -21,7 +21,7 @@ class ToolCommand:
     def main(self):
         # self.create_folder()
 
-        # self.create_app("login")
+        # self.create_app("room")
 
         self.run_server()
 
